@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../assests/admin.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <aside class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#" class="tab-link" data-tab="companies">Companies</a></li>
+                <li><a href="#" class="tab-link" data-tab="accept-decline">Accept/Decline</a></li>
+                <li><a href="#" class="tab-link" data-tab="list">List</a></li>
+                <li><a href="#" class="tab-link" data-tab="complaints">Complaints</a></li>
+                <li><a href="#" class="tab-link" data-tab="payments">Payments</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <section id="companies" class="tab-content">
+                <h3>Companies</h3>
+                <p>List of companies will appear here...</p>
+            </section>
+            
+            <section id="accept-decline" class="tab-content hidden">
+                <h3>Accept/Decline</h3>
+                <p>hey this is kapil and his surname is `${name1}`</p>
+            </section>
+            
+            <section id="list" class="tab-content hidden">
+                <h3>List</h3>
+                <p>Listed websites that have been verified...</p>
+            </section>
+            
+            <section id="complaints" class="tab-content hidden">
+                <h3>Complaints</h3>
+                <p>User complaints regarding services...</p>
+            </section>
+            
+            <section id="payments" class="tab-content hidden">
+                <h3>Payments</h3>
+                <p>Payment records of businesses...</p>
+            </section>
+        </main>
+    </div>
+    <script>
+      
+      // Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Function to show the clicked tab and hide others
+    function showTabContent(event) {
+        event.preventDefault();
+
+        const targetTab = event.target.getAttribute('data-tab');
+
+        // Hide all tab contents
+        tabContents.forEach(content => {
+            content.classList.add('hidden');
+            content.classList.remove('active');
+        });
+        // Show the target tab content
+        document.getElementById(targetTab).classList.remove('hidden');
+        document.getElementById(targetTab).classList.add('active');
+    }
+    // Add click event listener to all tab links
+    tabLinks.forEach(link => {
+        link.addEventListener('click', showTabContent);
+    });
+});
+
+    </script>
+    <script src="admin.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

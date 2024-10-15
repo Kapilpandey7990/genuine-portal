@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration Form</title>
+    <link rel="stylesheet" href="../assests/registration.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register Your Business</h2>
+        <form id="businessForm">
+            <!-- Business Name -->
+            <div class="form-group">
+                <label for="businessName">Legal Business Name</label>
+                <input type="text" id="businessName" name="businessName" placeholder="Enter your legal business name" required>
+            </div>
+
+            <!-- Website URL -->
+            <div class="form-group">
+                <label for="websiteURL">Website URL</label>
+                <input type="url" id="websiteURL" name="websiteURL" placeholder="Enter your website URL" required>
+            </div>
+
+            <!-- Business Type -->
+            <div class="form-group">
+                <label for="businessType">Business Type</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="" disabled selected>Select your business type</option>
+                    <option value="tech">Technology</option>
+                    <option value="finance">Finance</option>
+                    <option value="retail">Retail</option>
+                    <option value="education">Education</option>
+                    <option value="health">Healthcare</option>
+                    <option value="manufacturing">Manufacturing</option>
+                </select>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="contactName">Contact Name</label>
+                <input type="text" id="contactName" name="contactName" placeholder="Enter contact person name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactPhone">Contact Phone Number</label>
+                <input type="tel" id="contactPhone" name="contactPhone" placeholder="Enter contact phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactAddress">Contact Address</label>
+                <input type="text" id="contactAddress" name="contactAddress" placeholder="Enter business address" required>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="form-group">
+                <label for="socialMedia">Social Media Links</label>
+                <textarea id="socialMedia" name="socialMedia" placeholder="Provide links to your social media profiles (optional)" rows="3"></textarea>
+            </div>
+
+            <!-- Business Description -->
+            <div class="form-group">
+                <label for="businessDescription">Business Description</label>
+                <textarea id="businessDescription" name="businessDescription" placeholder="Provide a brief description of your business" rows="4" required></textarea>
+            </div>
+
+            <!-- Proof of Business (File Upload) -->
+            <div class="form-group">
+                <label for="proofOfBusiness">Proof of Business</label>
+                <input type="file" id="proofOfBusiness" name="proofOfBusiness" accept=".pdf,.jpg,.png" required>
+                <small>Upload documents like business license, registration certificate, or tax ID (PDF, JPG, PNG)</small>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="form-group">
+                <label for="paymentInfo">Payment Information</label>
+                <input type="text" id="paymentInfo" name="paymentInfo" placeholder="Enter your payment method details" required>
+                <small>For fees associated with listing or verification</small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

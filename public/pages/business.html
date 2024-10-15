@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Business Dashboard</title>
+    <!-- <link rel="stylesheet" href="../assests/style.css"> -->
+    <link rel="stylesheet" href="../assests/business.css">
+</head>
+<body>  
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Business Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a onclick="showItem('item1')" href="../index.html">Home</a></li>
+                    <li><a onclick="showItem('profile')" href="#profile">Profile</a></li>
+                    <li><a onclick="showItem('listings')" href="#listings">Manage Listings</a></li>
+                    <li><a onclick="showItem('payment')" href="#payment">Payment</a></li>
+                    <li><a onclick="showItem('edit')" href="#edit">Edit</a></li>
+                    <li><a onclick="showItem('item5')" href="#logout">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="profile" class="item-container">
+                <h2>Profile</h2>
+                <p>Welcome, [Business Name]!</p>
+            </section>
+            <section id="listings" class="item-container">
+                <h2>Manage Listings</h2>
+                <button class="btn">Register New Website</button>
+            </section>
+            <section id="payment" class="item-container">
+                <h2>Payment</h2>
+                <p>Complete your payment to list your website.</p>
+            </section>
+            <section id="edit" class="item-container">
+                <h2>this is editing tab</h2>
+                <p>Complete your payment to list your website.</p>
+            </section>
+        </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded",()=>{
+        document.getElementById("profile").style.display="none"
+        document.getElementById("listings").style.display="none"
+        document.getElementById("payment").style.display="none"
+        document.getElementById("edit").style.display="none"
+      })
+      function showItem(itemID){
+        const items= document.querySelectorAll(".item-container");
+
+        items.forEach(container =>{
+          container.style.display= "none";
+        })
+
+        document.getElementById(itemID).style.display="block"; 
+      }
+    </script>
+</body>
+
+</html>

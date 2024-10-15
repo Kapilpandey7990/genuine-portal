@@ -1,0 +1,154 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mainc {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    /* background-color: rgba(90, 27, 86, 0.059); */
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    max-width: 1200px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the sections */
+    border-radius: 8px;
+    /* border:0.5px solid black; */
+}
+
+.about {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.about p {
+    font-size: 16px;
+    color: #555;
+}
+
+.wrapper {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background for better readability */
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+}
+
+/* .wrapper h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+} */
+
+.wrapper .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+.wrapper .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-box input:focus,
+.wrapper .input-box input:valid {
+    border-color: #4070f4;
+}
+
+.wrapper .policy {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .policy h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.wrapper .input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+}
+
+.wrapper .input-box.button input:hover {
+    background: #0e4bf1;
+}
+
+.wrapper .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wrapper .text h3 a {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.wrapper .text h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about, .wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wrapper h2 {
+        font-size: 20px;
+    }
+}
